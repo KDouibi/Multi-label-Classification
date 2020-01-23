@@ -16,6 +16,7 @@ from collections import Counter
 #att= #input attributes
 #LCard: Label Caardinality
 #Nlabels: #labels
+
 def Pcut(self,D):
         attr=self.Attr
         LCard=self.LC
@@ -33,9 +34,7 @@ def Pcut(self,D):
                 index_L.append(a-attr)#a-attr: to get the exact label index according to Nlabels of D.
                 confidence.append(val.most_common(1)[0][1]/nl)
             a=a+1
-            
-        #1créer un vecteur de longueur égale nombre total de labels dans la BDD avec des 0 
-        
+      
         #initiate vector equal to Nlabels
         LFinal=np.zeros(Nlabels)
         if not index_L == False:
@@ -57,7 +56,7 @@ def Pcut(self,D):
                 
             else:
                 for l in range(lindfinal):
-                    indLFinal.append(sorteProbF[l][0] )#pour récupérer les positions des labels actifs
+                    indLFinal.append(sorteProbF[l][0] )
                         
                 np.put(LFinal,indLFinal,1)                
         return LFinal
