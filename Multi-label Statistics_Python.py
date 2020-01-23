@@ -11,7 +11,7 @@ def MLstatistics(D,Nlabels):
     Label_cardinality=sum(sum(labels))/n
     Label_density=Label_cardinality/Nlabels
     Diversity=Nlabels   
-# ====================To fix in python ...=======================================
+# ====================To fix in python ... use np.bincount()=======================================
 #     Distinct_Labelsets=size(unique(labelsets_dec2),1)
 #     labelsets_dec=bin2dec(sprintf('%d',base(i,((m-nbr_label)+1):end)));
 # =============================================================================   
